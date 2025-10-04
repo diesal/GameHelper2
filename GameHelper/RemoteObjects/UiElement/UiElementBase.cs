@@ -83,8 +83,14 @@ namespace GameHelper.RemoteObjects.UiElement
         }
 
         /// <summary>
+        /// Gets the scale factor of the large map overlay. (ratio of the map’s height to the current window height)
+        /// </summary>
+        public float Scale => positionModifier.X;
+
+        /// <summary>
         ///     Gets a value indicating whether the Ui Element is visible or not.
         /// </summary>
+        /// 
         public bool IsVisible
         {
             get
@@ -158,6 +164,7 @@ namespace GameHelper.RemoteObjects.UiElement
             ImGui.Text($"Parent  {this.parentAddress.ToInt64():X}");
             ImGui.Text($"Position Modifier {this.positionModifier}");
             ImGui.Text($"Scale Index {this.scaleIndex}");
+            ImGui.Text($"Scale {this.Scale}");
             ImGui.Text($"Local Scale Multiplier {this.localScaleMultiplier}");
             ImGui.Text($"Flags: {this.flags:X}");
             ImGui.Text("Background Color");
