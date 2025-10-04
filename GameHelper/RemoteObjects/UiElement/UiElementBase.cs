@@ -83,7 +83,7 @@ namespace GameHelper.RemoteObjects.UiElement
         }
 
         /// <summary>
-        /// Gets the scale factor of the large map overlay. (ratio of the map’s height to the current window height)
+        /// Gets the scale factor of the uielement (ratio of the current elements height to its base height).
         /// </summary>
         public float Scale => positionModifier.X;
 
